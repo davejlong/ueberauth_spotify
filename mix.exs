@@ -2,7 +2,7 @@ defmodule UeberauthSpotify.Mixfile do
   use Mix.Project
 
   @url "https://github.com/davejlong/ueberauth_spotify"
-  @version "0.5.0"
+  @version "0.0.1"
 
   def project do
     [app: :ueberauth_spotify,
@@ -49,7 +49,8 @@ defmodule UeberauthSpotify.Mixfile do
   end
 
   defp package do
-    [files: ["lib", "mix.exs", "README.md", "LICENSE"],
+    [name: :ueberauth_spotify_oauth,
+     files: ["lib", "mix.exs", "README.md", "LICENSE"],
      maintainers: ["Dave Long"],
      licenses: ["MIT"],
      links: %{"GitHub": @url}]

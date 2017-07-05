@@ -10,7 +10,7 @@
 
     ```elixir
     def deps do
-      [{:ueberauth_spotify, "~> 0.1"}]
+      [{:ueberauth_spotify_oauth, "~> 0.1"}]
     end
     ```
 
@@ -82,8 +82,6 @@ config :ueberauth, Ueberauth,
     spotify: {Ueberauth.Strategy.Spotify, [default_scope: "user-library-modify streaming"]}
   ]
 ```
-
-## Note
 
 This project was heavily inspired by [UeberauthGoogle](https://github.com/ueberauth/ueberauth_google).
 
