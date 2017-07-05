@@ -1,4 +1,4 @@
-# Contributing to Ueberauth Google
+# Contributing to Überauth Spotify
 
 ## Pull Requests Welcome
 1. Fork ueberauth_spotify
