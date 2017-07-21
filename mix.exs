@@ -45,7 +45,7 @@ defmodule UeberauthSpotify.Mixfile do
   end
 
   defp docs do
-     [extras: ["README.md", "LICENSE", "CONTRIBUTING.md"]]
+     [extras: ["README.md", "CONTRIBUTING.md"]]
   end
 
   defp package do
