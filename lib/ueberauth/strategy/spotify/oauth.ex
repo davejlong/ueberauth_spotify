@@ -86,5 +86,21 @@ defmodule Ueberauth.Strategy.Spotify.OAuth do
     |> OAuth2.Strategy.AuthCode.get_token(params, headers)
   end
 
+  def get_token_with_refresh(refresh_token, redirect_uri) do
+    client = client()
+    opts = [
+      redirect_uri: redirect_uri,
+      strategy: OAuth2.Strategy.Refresh
+    ]
+
+    client = opts
+    |> client
+    |> put_param("grant_type", "refresh_token")
+    |> put_param("refresh_token", refresh_token)
+    |> put_header("Accept", "application/json")
+    |> put_header("Authorization", "Basic #{Base.encode64(client.client_id <> ":" <> client.client_secret)}")
+    |> OAuth2.Client.get_token!([])
+  end
+
   defp config, do: Application.get_env(:ueberauth, Ueberauth.Strategy.Spotify.OAuth, [])
 end
