@@ -10,7 +10,7 @@
 
     ```elixir
     def deps do
-      [{:ueberauth_spotify_oauth, "~> 0.1"}]
+      [{:ueberauth_spotify, "~> 0.0.1", hex: :ueberauth_spotify_oauth}]
     end
     ```
 
