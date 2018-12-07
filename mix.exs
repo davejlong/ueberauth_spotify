@@ -2,7 +2,7 @@ defmodule UeberauthSpotify.Mixfile do
   use Mix.Project
 
   @url "https://github.com/davejlong/ueberauth_spotify"
-  @version "0.0.1"
+  @version "0.0.2"
 
   def project do
     [app: :ueberauth_spotify,
