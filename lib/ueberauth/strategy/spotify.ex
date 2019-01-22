@@ -85,7 +85,7 @@ defmodule Ueberauth.Strategy.Spotify do
     %Info{
       name: user["display_name"],
       email: user["email"],
-      image: user["images"] |> List.first |> Map.get("url"),
+      image: user["images"] |> List.first || %{url: nil} |> Map.get("url"),
       urls: user["external_urls"]
     }
   end
